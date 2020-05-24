@@ -1,0 +1,20 @@
+0.0  nem:1 pathloss nem:2,0.0 nem:3,69.2 nem:4,72.8 nem:5,75.4 nem:6,77.0 nem:7,0.0 nem:8,0.0 nem:9,69.2 nem:10,72.8 
+0.0  nem:2 pathloss nem:1,0.0 nem:3,0.0 nem:4,69.7 nem:5,73.2 nem:6,75.2 nem:7,0.0 nem:8,0.0 nem:9,0.0 nem:10,69.7 
+0.0  nem:3 pathloss nem:1,69.2 nem:2,0.0 nem:4,0.0 nem:5,69.6 nem:6,72.5 nem:7,69.2 nem:8,0.0 nem:9,0.0 nem:10,0.0 
+0.0  nem:4 pathloss nem:1,72.8 nem:2,69.7 nem:3,0.0 nem:5,0.0 nem:6,68.7 nem:7,72.8 nem:8,69.7 nem:9,0.0 nem:10,0.0 
+0.0  nem:5 pathloss nem:1,75.4 nem:2,73.2 nem:3,69.6 nem:4,0.0 nem:6,0.0 nem:7,75.4 nem:8,73.2 nem:9,69.6 nem:10,0.0 
+0.0  nem:6 pathloss nem:1,77.0 nem:2,75.2 nem:3,72.5 nem:4,68.7 nem:5,0.0 nem:7,77.0 nem:8,75.2 nem:9,72.5 nem:10,68.7 
+0.0  nem:7 pathloss nem:1,0.0 nem:2,0.0 nem:3,69.2 nem:4,72.8 nem:5,75.4 nem:6,77.0 nem:8,0.0 nem:9,69.2 nem:10,72.8 
+0.0  nem:8 pathloss nem:1,0.0 nem:2,0.0 nem:3,0.0 nem:4,69.7 nem:5,73.2 nem:6,75.2 nem:7,0.0 nem:9,0.0 nem:10,69.7 
+0.0  nem:9 pathloss nem:1,69.2 nem:2,0.0 nem:3,0.0 nem:4,0.0 nem:5,69.6 nem:6,72.5 nem:7,69.2 nem:8,0.0 nem:10,0.0 
+0.0  nem:10 pathloss nem:1,72.8 nem:2,69.7 nem:3,0.0 nem:4,0.0 nem:5,0.0 nem:6,68.7 nem:7,72.8 nem:8,69.7 nem:9,0.0 
+0.0  nem:1 location gps 40.031075,-74.523518,3.000000
+0.0  nem:2 location gps 40.031165,-74.523412,3.000000
+0.0  nem:3 location gps 40.031227,-74.523247,3.000000
+0.0  nem:4 location gps 40.031290,-74.523095,3.000000
+0.0  nem:5 location gps 40.031361,-74.522942,3.000000
+0.0  nem:6 location gps 40.031433,-74.522836,3.000000
+0.0  nem:7 location gps 40.031075,-74.523518,3.000000
+0.0  nem:8 location gps 40.031165,-74.523412,3.000000
+0.0  nem:9 location gps 40.031227,-74.523247,3.000000
+0.0  nem:10 location gps 40.031290,-74.523095,3.000000

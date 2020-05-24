@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dockerplan>
+  <containertemplates>
+    <containertemplate name="modem">
+      <parameters>
+        <parameter name"--publish=" value="${'0.0.0.0:%d:8882'%(int('5'*(5-len(str(abs(int(docker_index)%65535))))+str(int(docker_index)%65535)}"/>
+        <parameter name="image" value=""/>
+      </parameters>
+      <interfaces>
+        <interface bridge="emane_br">
+        <parameter name="ipv4" value="10.11.0.${docker_index}">
+        </interface>
+        <interface bridge="to_mgen_br_${docker_index}">
+        <parameter name="ipv4" value="10.102.${docker_index}.254">
+        </interface>
+      </interfaces>
+    </containertemplate>
+
+<containertemplate name="mgen">
+      <parameters>
+        <parameter name="image" value=""/>
+      </parameters>
+      <interfaces>
+        <interface bridge="emane_br">
+        <parameter name="ipv4" value="10.11.2.${docker_index}">
+        </interface>
+        <interface bridge="mgen_br_${docker_index}">
+        <parameter name="ipv4" value="10.100.${docker_index}.1">
+        </interface>
+      </interfaces>
+    </containertemplate>
+
+  </containertemplates>
+  <hosts>
+    <host hostname="localhost" ip="127.0.0.1">
+      <bridges>
+        <bridge name="emane_br" persistent="false" subnet="10.11.1.1/16" iprange="10.11.1.1/16" gateway="10.11.1.1" mtu="1000">
+        </bridge>
+        <bridge name="mgen_br_1" persistent="false" subnet="10.100.1.100/24" iprange="10.100.1.100/24" gateway="10.100.1.100">
+        </bridge>
+       <bridge name="mgen_br_2" persistent="false" subnet="10.100.2.100/24" iprange="10.100.2.100/24" gateway="10.100.2.100">
+        </bridge>
+       <bridge name="to_mgen_br_1" persistent="false" subnet="10.102.1.100/24" iprange="10.102.1.100/24" gateway="10.102.1.100" >
+        </bridge>
+       <bridge name="to_mgen_br_2" persistent="false" subnet="10.102.1.100/24" iprange="10.102.2.100/24" gateway="10.102.2.100">
+        </bridge>
+      </bridges>
+      <containers>
+        <container docker_name="modem-${docker_index}" template="modem" docker_indices="1"/>
+        <container docker_name="mgen-${docker_index}"  template="mgen" docker_indices="1"/>
+        <container docker_name="modem-${docker_index}" template="modem" docker_indices="2"/>
+        <container docker_name="mgen-${docker_index}" template="mgen" docker_indices="2"
+      </containers>
+    </host>
+  </hosts>
+</dockerplan>

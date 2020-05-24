@@ -1,0 +1,21 @@
+<test>
+  <name>tdmact test</name>
+
+  <description>
+    Running the tdmact test
+  </description>
+
+  <overlays>
+    <overlay name="eventservicedevice" value="ota0"/>
+    <overlay name="otamanagergroup" value="224.1.2.9:45702"/>
+    <overlay name="eventservicegroup" value="224.1.2.9:45703"/>
+  </overlays>
+
+  <templates indices="1-2">
+    <directory name="modem" hostname_fromat="modem-${etce_index}">
+    </directory>
+    <directory name="mgen" hostname_format="mgen-${etce_index}"/>
+    <directory name="eel"  hostname_format="modem-${etce_index}"/>
+  </templates>
+</test>
+
